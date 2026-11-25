@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#0F766E"/>
+  <circle cx="152" cy="152" r="64" fill="#EBF6F6" stroke="#CCFBF1" stroke-width="10"/>
+  <circle cx="360" cy="152" r="64" fill="#EBF6F6" stroke="#CCFBF1" stroke-width="10"/>
+  <circle cx="152" cy="360" r="64" fill="#EBF6F6" stroke="#CCFBF1" stroke-width="10"/>
+  <circle cx="360" cy="360" r="64" fill="#FFFFFF" stroke="#5EEAD4" stroke-width="12"/>
+  <path d="M236 152h40M256 132v40" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round"/>
+  <path d="M132 256h40" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round"/>
+  <path d="M236 348h40M236 372h40" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round"/>
+  <path d="M342 238l36 36M378 238l-36 36" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round"/>
+  <text x="152" y="170" text-anchor="middle" font-family="sans-serif" font-weight="800" font-size="56" fill="#0F172A">4</text>
+  <text x="360" y="170" text-anchor="middle" font-family="sans-serif" font-weight="800" font-size="56" fill="#0F172A">5</text>
+  <text x="152" y="378" text-anchor="middle" font-family="sans-serif" font-weight="800" font-size="56" fill="#0F172A">2</text>
+  <text x="360" y="378" text-anchor="middle" font-family="sans-serif" font-weight="800" font-size="56" fill="#0F766E">9</text>
+</svg>
