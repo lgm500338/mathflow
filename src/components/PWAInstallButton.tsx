@@ -1,3 +1,4 @@
+import { createPortal } from 'react-dom';
 import React, { useState } from 'react';
 import { Download, X } from 'lucide-react';
 import { usePWAInstall } from '../hooks/usePWAInstall';
@@ -38,7 +39,7 @@ export const PWAInstallButton: React.FC<PWAInstallButtonProps> = ({ t }) => {
           <span>{t.installIOS}</span>
         </button>
 
-        {showIOSGuide && (
+        {showIOSGuide && createPortal(
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/50 p-4 backdrop-blur-xs">
             <div className="w-full max-w-sm rounded-2xl bg-white p-6 shadow-xl border border-slate-200">
               <div className="flex items-center justify-between">
@@ -64,7 +65,8 @@ export const PWAInstallButton: React.FC<PWAInstallButtonProps> = ({ t }) => {
                 {t.close}
               </button>
             </div>
-          </div>
+          </div>,
+          document.body,
         )}
       </>
     );

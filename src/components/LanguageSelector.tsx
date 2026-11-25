@@ -1,3 +1,4 @@
+import { createPortal } from 'react-dom';
 import React, { useState } from 'react';
 import { Check, Globe, X } from 'lucide-react';
 import { LANGUAGES, type LanguageCode, type TranslationStrings } from '../i18n/translations';
@@ -28,13 +29,13 @@ export const LanguageSelector: React.FC<LanguageSelectorProps> = ({
         <span>{activeMeta.nativeName}</span>
       </button>
 
-      {open && (
+      {open && createPortal(
         <div
           className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-slate-950/50 backdrop-blur-xs p-0 sm:p-4"
           onClick={() => setOpen(false)}
         >
           <div
-            className="w-full sm:max-w-lg rounded-t-3xl sm:rounded-2xl bg-white border border-slate-200 shadow-xl overflow-hidden max-h-[85vh] flex flex-col"
+            className="w-full sm:max-w-lg rounded-t-3xl sm:rounded-2xl bg-white border border-slate-200 shadow-xl overflow-hidden max-h-[85dvh] flex flex-col pb-safe"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between px-5 py-4 border-b border-slate-100">
@@ -79,7 +80,8 @@ export const LanguageSelector: React.FC<LanguageSelectorProps> = ({
               })}
             </div>
           </div>
-        </div>
+        </div>,
+        document.body,
       )}
     </>
   );
